@@ -1,0 +1,112 @@
+// Buttons Component Styles
+// ========================================
+
+// Main Button
+@mixin button{
+  border-radius: 2px;
+  display: inline-block;
+  @include font-type($primary-sans-serif, normal, $bold);
+  @include rem(padding, 8px);
+  @include s-small;
+  @include transition (all 0.3s ease-in-out);
+  letter-spacing: 1px;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+
+  text{
+    align: center;
+    decoration: none;
+  }
+  -webkit-appearance: none;
+
+  &:hover{ cursor: pointer; }
+
+  &:focus{
+    border: none;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+
+// Buton Sizes
+.button-small {
+  @include rem(padding, 5px 6px);
+  @include s-small;
+}
+
+.button-large {
+   @include rem(padding, 15px 12px);
+}
+
+// Button Styles
+@each $button in $buttons{
+  $type:        nth($button, 1);
+  $bg-1:        nth($button, 2);
+  $border:      nth($button, 3);
+  $color:       nth($button, 4);
+  $hover-bg:    nth($button, 5);
+  $hover-color: nth($button, 6);
+
+  .button-#{$type}{
+    background-color: $bg-1;
+    border: 1px solid $border;
+    color: $color;
+    @include button;
+
+    &:hover{
+      background-color: $hover-bg;
+      border: 1px solid $hover-bg;
+      color: $hover-color;
+      opacity: 1;
+    }
+
+    &:active{
+      background-color: $hover-bg;
+      border: 1px solid $hover-bg;
+      color: darken($hover-color, 5%);
+    }
+
+    &:focus{ border: 1px solid $hover-bg; }
+  }
+
+  // Links
+  .link-#{$type}{
+    color: $bg-1;
+    border-bottom: 2px solid $bg-1;
+    display: inline-block;
+    @include s-small;
+    @include font-type($primary-sans-serif, normal, $bold);
+    @include transition(all 0.3s ease-in-out);
+    @include rem(margin-top, 15px);
+    @include rem(padding-bottom, 3px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &:hover{
+      color: $bg-1;
+      opacity: 0.6;
+    }
+  }
+}
+
+
+.scroll-on-page {
+  aside {
+    @include media($tablet) {
+      @include span-columns(4 of 12);
+    }
+  }
+
+  .scroll-link {
+    display: block;
+    outline: none;
+  }
+
+  article {
+    @include media($tablet) {
+      @include span-columns(8 of 12);
+    }
+  }
+}
