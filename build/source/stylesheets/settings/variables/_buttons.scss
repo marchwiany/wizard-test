@@ -1,0 +1,15 @@
+// Buttons
+// ========================================
+
+$buttons: (
+  (default, $blue-base,   $blue-dark,   $white-base,   $blue-dark,   $white-base)
+  (primary,     $red-base,    $red-base,    $white-base,   $red-dark,    $white-base)
+  (red-outline,     transparent,    $red-base,    $red-base,   $red-base,    $white-base)
+  (black-base,     $black-dark,    $black-dark,    $white-base,   $black-dark,    $white-base)
+  (grey-base,     $grey-base,    $grey-base,    $white-base,   $grey-base,    $white-base)
+  (grey-outline,     transparent,    $grey-base,    $grey-base,   $grey-base,    $white-base)
+  (success, $green-base,  $green-dark,  $white-base,   $white-base,   $white-base)
+  (warning, $yellow-base, $yellow-dark, $white-base,   $white-base,   $white-base)
+  (danger,  $red-base,    $red-dark,    $white-base,   $white-base,   $white-base)
+  (inverse, $white-base,  $white-dark,  $black-base,   $white-base,   $white-base)
+);

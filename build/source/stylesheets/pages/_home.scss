@@ -70,10 +70,6 @@
 
   &.grey-button{
     background-color: $grey-light;
-
-    &:hover{
-      background-color: darken($grey-light, 8%);
-    }
   }
 
   &:hover{

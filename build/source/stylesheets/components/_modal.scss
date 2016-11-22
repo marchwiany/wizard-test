@@ -1,0 +1,313 @@
+.modal {
+
+  label {
+    cursor: pointer;
+    font-weight: normal;
+    margin-bottom: 0;
+    color: $cream-base;
+  }
+
+  .modal-state { display: none; }
+
+  .modal-fade-screen { // overlay
+    @include position(fixed, 0 0 0 0);
+    background-color: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    visibility: hidden;
+    z-index: 9999999;
+
+    @include media($tablet-landscape) {
+      //padding-top: 10em;
+    }
+  }
+
+  .modal-bg {
+    cursor: pointer;
+    @include position(absolute, 0 0 0 0);
+  }
+
+  .modal-close {
+    cursor: pointer;
+    @include position(absolute, 20px 20px null null);
+  }
+
+  .modal-inner {
+    @include outer-container;
+    background-color: $blue-base;
+    margin: auto;
+    max-height: 95%;
+    overflow: auto;
+    position: relative;
+    //top: 0.5em;
+    transition: opacity 0.25s ease;
+    width: 100%;
+
+    @include media($tablet) {
+      @include center;
+      width: 65%;
+      @include vertical-center;
+      left: 50%;
+      max-height: 598px;
+      @include transform(translateY(-50%) translateX(-50%));
+    }
+  }
+
+  .modal-state:checked + .modal-fade-screen {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal-open { overflow: hidden; }
+
+.modal-closed { overflow: auto; }
+
+.modal-trigger { cursor: pointer; display: inline-block; }
+
+.button-full {
+  background-color: $blue-dark;
+  color: $cream-base;
+  //@include rem(margin-top, 30px);
+  @include rem(padding, 20px 0);
+  @include rem(margin-bottom, 0);
+  width: 100%;
+  &:hover { background-color: $blue-darker; }
+}
+
+// Based on code by Kasper Mikiewicz
+
+.modal-content {
+  @include clearfix;
+
+  h6 {
+    color: $red-base;
+    @include rem(margin, 0);
+  }
+
+  & .contact-block { @include rem(margin-top, 20px); }
+}
+
+
+.cp-side-header {
+  display: none;
+  @include media($tablet-landscape) {
+    display: block;
+    //@include clearfix;
+    background-color: $cream-base;
+    height: 598px;
+    width: 20%;
+    float: left;
+    position:relative;
+  }
+
+  .cp-logo-xl {
+    @include media($tablet) {
+      //background-color: $cream-base;
+      @include center;
+      width: 140px;
+      @include vertical-center;
+      left: 50%;
+      @include transform(translateY(-50%) translateX(-50%));
+    }
+  }
+}
+
+.modal-fields-all {
+  @include rem(padding, 40px 20px 25px);
+}
+
+.contact-fields .input {
+  @include media($tablet){
+    @include span-columns(6 of 12);
+    @include omega(2n);
+  }
+}
+.contact-block {
+  @include media($tablet){
+    @include span-columns(6 of 12);
+    @include omega(2n);
+  }
+  &.large-input {
+    width: 100%;
+  }
+}
+.contact-blocks {
+  @include clearfix;
+}
+
+.modal-content-wrapper{
+  @include media($tablet-landscape){
+    width: 80%;
+    float: left;
+    max-height: 598px;
+    overflow-y: scroll;
+  }
+}
+
+/* --------------------------
+Checkbox For Newsletter
+-------------------------- */
+.newsletter-checkbox { @include rem(margin-top, 20px); }
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  cursor: pointer;
+  @include font-type($secondary-sans-serif-reg, normal, 300);
+  @include s-tiny;
+  padding-left: 25px;
+  padding-top: 4px;
+  position: relative;
+    text-transform: inherit;
+}
+
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left:0;
+  top: 2px;
+  width: 17px;
+  height: 17px;
+  background: $cream-base;
+}
+
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-size: 14px;
+  color: $red-base;
+  transition: all .2s;
+}
+
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+.newsletter-checkbox {
+  .mail-checkbox { @include rem(padding-bottom, 8px); }
+  p {
+    color: $cream-base;
+  @include font-type($secondary-sans-serif-reg, normal, 300);
+    @include s-small;
+    margin-bottom: 4px;
+  }
+}
+/* --------------------------
+Icon Slide Out Effect
+-------------------------- */
+.input {
+  background: $cream-base;
+  display: inline-block;
+  @include font-type($secondary-sans-serif-bold, normal, 300);
+  position: relative;
+  margin: 0.7em 0;
+  width: 100%;
+  vertical-align: top;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.input__field {
+  border: none;
+  border-radius: 0;
+  color: $black-base;
+  display: block;
+  @include appearance(none);
+  @include font-type($secondary-sans-serif-reg, normal, 300);
+  //@include rem(padding, 28px);
+  position: relative;
+  width: 100%;
+}
+
+.input__field:focus { outline: none; }
+
+.input__label {
+  color: $red-base;
+  @include position(absolute, 0 null null null);
+  @include rem(padding, 0 11px);
+  @include s-tiny;
+  @include user-select(none);
+  pointer-events: none;
+  text-align: left;
+  -webkit-touch-callout: none;
+  width: 100%;
+}
+
+.input__label-content {
+  color: $red-base;
+  display: inline-block;
+  @include position(absolute, 0px null null null);
+  @include rem(padding, 18px 0);
+  @include transform(translate3d(-1.75em, 0, 0));
+  @include transition(transform 0.3s, opacity 0.3s);
+  width: auto;
+}
+
+.icon {
+  display: inline-block;
+  @include rem(margin-top, 15px);
+  @include transform(translate3d(-3em, 0, 0));
+  @include transition(transform 0.3s);
+}
+
+.input__field:focus + .input__label .input__label-content,
+.input--filled .input__label-content {
+  @include transform(translate3d(100px, 0, 0));
+  opacity: 0;
+}
+
+.input__label-content,
+.icon,
+.input__field:focus + .input__label .input__label-content,
+.input--filled .input__label-content {
+  @include transition-timing-function(cubic-bezier(0.7, 0, 0.3, 1));
+}
+
+.input__field:focus + .input__label .icon,
+.input--filled  .icon {
+  @include transform(translate3d(0, 0, 0));
+}
+
+/* --------------------------
+Error / Success Messages
+-------------------------- */
+.message_errors {
+  background-color: $red-base;
+  @include clearfix;
+  @include rem(padding, 20px);
+
+  .message-header { color: $blue-base; }
+
+  .error-list li{
+     color: $cream-base;
+     @include font-type($secondary-sans-serif-reg, normal, 300);
+     @include omega(2n);
+     @include span-columns(6 of 12);
+     @include s-small;
+     text-transform: capitalize;
+  }
+}
+
+.success_message {
+  .thanks {
+    color: $red-base;
+    @include rem(padding, 0 20px);
+    @include vertical-center;
+    @include media($tablet-landscape) { left: 20%; }
+  }
+}
