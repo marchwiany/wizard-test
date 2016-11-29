@@ -984,12 +984,12 @@ input[type="submit"] {
 #msform input[type="checkbox"], #msform input[type="radio"] {
   margin: 0px; }
 
-#msform input {
+#msform .inputs input {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 48.82117%; }
-  #msform input:last-child {
+  #msform .inputs input:last-child {
     margin-right: 0; }
 
 /*-----------------------
