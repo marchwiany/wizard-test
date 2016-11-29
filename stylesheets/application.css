@@ -952,23 +952,16 @@ textarea {
   -ms-appearance: none;
   -o-appearance: none;
   appearance: none;
-  font-size: 15.5px;
-  font-size: 1.10714rem;
-  line-height: normal;
   border: 1px solid #DEDEDE;
   border-radius: 3px;
   box-sizing: border-box;
-  padding: 15px;
+  padding: 10px 15px;
   width: 100%;
-  -webkit-font-smoothing: antialiased; }
-  input[type="color"].newsletter, input[type="date"].newsletter, input[type="datetime"].newsletter, input[type="datetime-local"].newsletter, input[type="email"].newsletter, input[type="month"].newsletter, input[type="number"].newsletter, input[type="password"].newsletter, input[type="search"].newsletter, input[type="tel"].newsletter, input[type="text"].newsletter, input[type="time"].newsletter, input[type="url"].newsletter, input[type="week"].newsletter, input:not([type]).newsletter, textarea.newsletter,
-  select.newsletter,
-  textarea.newsletter {
-    height: 40px; }
-  .modal input[type="color"], .modal input[type="date"], .modal input[type="datetime"], .modal input[type="datetime-local"], .modal input[type="email"], .modal input[type="month"], .modal input[type="number"], .modal input[type="password"], .modal input[type="search"], .modal input[type="tel"], .modal input[type="text"], .modal input[type="time"], .modal input[type="url"], .modal input[type="week"], .modal input:not([type]), .modal textarea, .modal
-  select, .modal
-  textarea {
-    padding: 19px 40px 15px; }
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px;
+  font-size: 1.28571rem;
+  line-height: 32.2px;
+  line-height: 2.3rem; }
   input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
   select:focus,
   textarea:focus {
@@ -990,6 +983,14 @@ input[type="submit"] {
 
 #msform input[type="checkbox"], #msform input[type="radio"] {
   margin: 0px; }
+
+#msform input {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  #msform input:last-child {
+    margin-right: 0; }
 
 /*-----------------------
 Radio Buttons
@@ -1199,6 +1200,10 @@ Radio Buttons
   content: "Days";
   float: right; }
 
+.add-break {
+  display: block;
+  clear: both; }
+
 /*-----------------------
 Tooltip
 -----------------------*/
@@ -1346,6 +1351,13 @@ Tooltip
   .sliding-panel-button:hover {
     opacity: 0.6; }
 
+em.colored {
+  color: #F58220;
+  font-style: normal; }
+
+strong {
+  font-weight: 600px; }
+
 [class*=-container] {
   padding: 40px 20px;
   padding: 2.85714rem 1.42857rem;
@@ -1392,14 +1404,13 @@ Tooltip
 
 /*inputs*/
 #msform input, #msform textarea {
-  padding: 15px;
+  padding: 5px 15px;
   border: 1px solid #ccc;
   border-radius: 3px;
   margin-bottom: 10px;
-  width: 100%;
   box-sizing: border-box;
   color: #2C3E50;
-  font-size: 13px; }
+  display: block; }
 
 /*buttons*/
 #msform .action-button {
