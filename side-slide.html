@@ -20,8 +20,11 @@
   </div>
 
   <div class="callout-block">
-    <h5>Got 3 minutes?</h5>
-    <p>Account activation is that easy.</p>
+    <div class="nav-block">
+      <h5>Got 3 minutes?</h5>
+      <p>Account activation is that easy.</p>
+    </div>
+    <img src="images/menu.png" class="sliding-panel-button">
   </div>
 </header>
 
@@ -173,6 +176,15 @@
         nextObj.find("span.bar > span").css("width", percentage + "%");
         nextObj.find("span.bar-btn > span").text(value);
       };
+
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.sliding-panel-button,.sliding-panel-fade-screen,.sliding-panel-close').on('click touchstart',function (e) {
+          $('.sliding-panel-content,.sliding-panel-fade-screen').toggleClass('is-visible');
+          e.preventDefault();
+        });
+      });
 
     </script>
   </body>
