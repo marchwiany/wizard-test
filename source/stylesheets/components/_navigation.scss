@@ -6,10 +6,14 @@ $desktop-nav-height: 81px;
 .navigation {
   background-color: $white-base;
   display: inline-block;
-  @include rem(padding, 20px 20px);
+  @include rem(padding, 10px 20px);
   position: relative;
   text-align: center;
   width: 100%;
+
+  @include media($tablet){
+    @include rem(padding, 20px 20px);
+  }
 }
 
 
@@ -20,12 +24,11 @@ Logo
   @include rem(margin-bottom, 0px);
   @include transition(all 0.3s ease-in-out);
   float: left;
-  width: 120px;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+  text-align: left;
 
-  @include media($tablet) {
-    width: 200px;
+  h1{
+    color: $grey-base;
+    @include rem(margin-top, 8px);
   }
 }
 
@@ -46,7 +49,7 @@ Primary Nav
     }
 
     h5{
-      @include rem(margin-top, 5px);
+      @include rem(margin-top, 12px);
 
       @include media($tablet){
         margin-top: 0px;
