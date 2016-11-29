@@ -48,7 +48,7 @@ input[type="submit"]{
   margin: 0px;
 }
 
-#msform input{
+#msform .inputs input{
   @include span-columns(6 of 12);
 }
 /*-----------------------
