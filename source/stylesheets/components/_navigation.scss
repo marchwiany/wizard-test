@@ -58,3 +58,11 @@ Primary Nav
   }
 }
 
+.nav-block{
+  @include media($tablet){
+    border-right: 1px solid $grey-light;
+    display: inline-block;
+    @include rem(margin-right, 20px);
+    @include rem(padding-right, 20px);
+  }
+}
