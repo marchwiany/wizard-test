@@ -17,19 +17,15 @@ textarea{
   @include appearance(none);
   //@include font-type($secondary-sans-serif-reg, normal, 300);
   //@include placeholder{ font-style: italic; }
-  @include s-medium;
   border: 1px solid $white-med;
   border-radius: 3px;
   box-sizing: border-box;
   //height: 40px;
-  padding: 15px;
+  padding: 10px 15px;
   width: 100%;
   -webkit-font-smoothing: antialiased;
-
- &.newsletter { height: 40px; }
- .modal &{
-    padding: 19px 40px 15px;
-  }
+  @include s-big;
+  //width: 50%;
 
   &:focus{
     //@include box-shadow(0 0 0, transparent);
@@ -52,6 +48,9 @@ input[type="submit"]{
   margin: 0px;
 }
 
+#msform input{
+  @include span-columns(6 of 12);
+}
 /*-----------------------
 Radio Buttons
 -----------------------*/
@@ -287,4 +286,9 @@ Radio Buttons
       float: right;
     }
   }
+}
+
+.add-break{
+  display: block;
+  clear: both;
 }
