@@ -984,13 +984,14 @@ input[type="submit"] {
 #msform input[type="checkbox"], #msform input[type="radio"] {
   margin: 0px; }
 
-#msform .inputs input {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%; }
-  #msform .inputs input:last-child {
-    margin-right: 0; }
+@media screen and (min-width: 45em) {
+  #msform .inputs input {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    #msform .inputs input:last-child {
+      margin-right: 0; } }
 
 /*-----------------------
 Radio Buttons
@@ -1006,6 +1007,8 @@ input[type="radio"] {
 .radio {
   display: inline-block;
   cursor: pointer;
+  padding: 10px 0px;
+  padding: 0.71429rem 0px;
   width: 100%; }
   .radio label {
     cursor: pointer;
@@ -1530,7 +1533,7 @@ hr {
     transform: scale(1);
     opacity: 1; }
   .two-column-checkboxes .radio input:focus + .outer .inner {
-    background: url(../../images/checkmark.png) no-repeat;
+    background: url(/images/checkmark.png) no-repeat;
     background-size: 100%;
     height: 12px;
     width: 12px;
@@ -1538,13 +1541,13 @@ hr {
   .two-column-checkboxes .radio .outer {
     border-radius: 0px; }
     .two-column-checkboxes .radio .outer .inner {
-      background: url(../../images/checkmark.png) no-repeat;
+      background: url(/images/checkmark.png) no-repeat;
       background-size: 100%;
       height: 12px;
       width: 12px;
       display: block; }
       .two-column-checkboxes .radio .outer .inner:after {
-        background: url(../../images/checkmark.png) no-repeat;
+        background: url(/images/checkmark.png) no-repeat;
         background-size: 100%;
         height: 12px;
         width: 12px;
