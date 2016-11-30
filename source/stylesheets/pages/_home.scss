@@ -177,7 +177,7 @@ hr{
       }
 
       &:focus + .outer .inner {
-        background: image-url("checkmark.png") no-repeat;
+        background: url(../../images/checkmark.png) no-repeat;
         background-size: 100%;
         height: 12px;
         width: 12px;
@@ -189,14 +189,14 @@ hr{
       border-radius: 0px;
 
       .inner {
-        background: image-url("checkmark.png") no-repeat;
+        background: url(../../images/checkmark.png) no-repeat;
         background-size: 100%;
         height: 12px;
         width: 12px;
         display: block;
 
         &:after{
-          background: image-url("checkmark.png") no-repeat;
+          background: url(../../images/checkmark.png) no-repeat;
           background-size: 100%;
           height: 12px;
           width: 12px;
