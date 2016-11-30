@@ -1381,6 +1381,16 @@ strong {
   margin: 0 auto;
   max-width: 500px; }
 
+fieldset:first-of-type {
+  -webkit-animation: fade-in 0.8s ease-in;
+  -moz-animation: fade-in 0.8s ease-in;
+  animation: fade-in 0.8s ease-in; }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 /*form styles*/
 #msform {
   margin: 150px auto 50px;
