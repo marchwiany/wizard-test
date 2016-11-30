@@ -1417,6 +1417,11 @@ fieldset:first-of-type {
 
 /*inputs*/
 #msform input, #msform textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
   padding: 5px 15px;
   border: 1px solid #ccc;
   border-radius: 3px;
