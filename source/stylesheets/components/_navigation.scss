@@ -42,10 +42,10 @@ Primary Nav
   z-index: 9;
 
   .callout-block{
+    @include mobile-hide;
     text-align: right;
 
     p{
-      //@include mobile-hide;
       display: inline-block;
       vertical-align: 5px;
       width: inherit;

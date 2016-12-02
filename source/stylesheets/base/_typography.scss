@@ -41,7 +41,7 @@ h1 { font-size: $font-size-base * 1.50; @include media($tablet){ font-size: $fon
 h2 { font-size: $font-size-base * 2.00; @include media($tablet){ font-size: $font-size-base * 2.75; } }
 h3 { font-size: $font-size-base * 1.45; @include media($tablet){ font-size: $font-size-base * 2.25; } }
 h4 { font-size: $font-size-base * 1.25; @include media($tablet){ font-size: $font-size-base * 1.75; } }
-h5 { font-size: $font-size-base * 1.00; @include media($tablet){ font-size: $font-size-base * 1.25; } }
+h5 { font-size: $font-size-base * 1.00; @include media($tablet){ font-size: $font-size-base * 1.10; } }
 h6 { font-size: $font-size-base - 2.00; @include media($tablet){ font-size: $font-size-base * 0.90; } }
 
 h3{
