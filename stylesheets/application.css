@@ -118,7 +118,7 @@ h5 {
   font-size: 14px; }
   @media screen and (min-width: 45em) {
     h5 {
-      font-size: 17.5px; } }
+      font-size: 15.4px; } }
 
 h6 {
   font-size: 12px; }
@@ -918,7 +918,11 @@ Primary Nav
   width: 100%;
   z-index: 9; }
   .navigation .callout-block {
+    display: none;
     text-align: right; }
+    @media screen and (min-width: 45em) {
+      .navigation .callout-block {
+        display: block; } }
     .navigation .callout-block p {
       display: inline-block;
       vertical-align: 5px;
@@ -1291,7 +1295,7 @@ Tooltip
       width: calc(100% - 99px); }
     .tooltip-item .tooltip img {
       width: 76px;
-      box-shadow: 0 0 31px 0 rgba(149, 149, 149, 0.5);
+      box-shadow: 0 0 36px 0 rgba(200, 200, 200, 0.8);
       display: inline-block;
       margin-right: 15px;
       vertical-align: 30px; }
