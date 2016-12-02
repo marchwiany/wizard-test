@@ -5,9 +5,13 @@
 label{
   //@include font-type($secondary-sans-serif-bold, normal, 700);
   //@include rem(margin, 20px 0 4px);
-  @include s-base;
-  //display: block;
+  @include s-small;
+  @include rem(margin-bottom, 5px);
+  display: block;
   //text-transform: uppercase;
+  font-weight: bold;
+  color: $black-base;
+
 }
 
 // Inputs
@@ -48,10 +52,25 @@ input[type="submit"]{
   margin: 0px;
 }
 
-#msform .inputs input{
-  @include media($tablet){
-    @include span-columns(6 of 12);
+#msform .inputs {
+  display: inline-block;
+  width: 100%;
+
+  &.half-input input{
+    @include media($tablet){
+      @include span-columns(6 of 12);
+    }
   }
+
+    &.full-input input{
+      width: 100%;
+    }
+
+    &.third-input input{
+      @include media($tablet){
+        @include span-columns(4 of 12);
+      }
+    }
 }
 /*-----------------------
 Radio Buttons

@@ -45,10 +45,15 @@ Primary Nav
     text-align: right;
 
     p{
-      @include mobile-hide;
+      //@include mobile-hide;
+      display: inline-block;
+      vertical-align: 5px;
+      width: inherit;
+      margin-bottom: 0px;
+      @include s-small;
     }
 
-    h5{
+    h6{
       @include rem(margin-top, 12px);
 
       @include media($tablet){
@@ -60,9 +65,23 @@ Primary Nav
 
 .nav-block{
   @include media($tablet){
-    border-right: 1px solid $grey-light;
+    //border-right: 1px solid $grey-light;
     display: inline-block;
     @include rem(margin-right, 20px);
     @include rem(padding-right, 20px);
   }
+}
+
+.finish-later{
+  display: none;
+}
+
+.arrow{
+  display: inline-block;
+  width: 29px;
+  margin-right: -31px;
+}
+
+.sliding-panel-button{
+  vertical-align: super;
 }

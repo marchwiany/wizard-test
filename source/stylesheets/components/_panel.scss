@@ -89,3 +89,15 @@ em.colored{
 strong{
   font-weight: 600px;
 }
+
+//Close Button
+.sliding-panel-close img{
+  @include position(absolute, 28px 20px null null);
+  @include rem(padding, 10px);
+  @include transition(all 0.3s ease-in-out);
+  width: 35px;
+
+  &:hover{
+    opacity: 0.6;
+  }
+}

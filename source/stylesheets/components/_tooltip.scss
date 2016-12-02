@@ -8,9 +8,9 @@ Tooltip
   $base-line-height: 1.5em !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
+  $tooltip-background: $white-base;
   $tooltip-background: #313839;
   $tooltip-color: $base-font-color;
-  $tooltip-max-width: 16em;
   $tooltip-arrow-width: 8px;
   $tooltip-shadow: 0 2px 2px silver;
   $tooltip-distance-from-item: 3em;
@@ -38,22 +38,22 @@ Tooltip
   .tooltip {
     @include position(absolute, null 0 $tooltip-distance-from-item 0);
     background-color: $tooltip-background;
-    background: #313839;
     border-radius: $base-border-radius;
     box-shadow: $tooltip-shadow;
+    box-shadow: 0 0 20px 0 rgba(36,36,36,0.25);
     color: #FFF;
     font-size: 10px;
     line-height: 1.5em;
     margin: 0 auto;
-    max-width: $tooltip-max-width;
+    //max-width: $tooltip-max-width;
     opacity: 0;
-    padding: 10px;
+    padding: 15px;
     transition: all 0.2s ease-in-out;
     text-align: left;
-    width: 200px;
+    width: 300px;
     visibility: hidden;
     z-index: 10;
-    margin-left: -64px;
+    margin-left: -136px;
 
     h6{
       color: $grey-base;
@@ -66,6 +66,22 @@ Tooltip
       line-height: 1.5em;
       margin: 0;
       font-size: 12px;
+      display: inline-block;
+    }
+
+    &.tooltip-image{
+      p{
+        width: calc(100% - 99px);
+      }
+    }
+
+    img{
+      width: 76px;
+      //border: 1px solid $white-base;
+      box-shadow: 0 0 31px 0 rgba(149,149,149,0.50);
+      display: inline-block;
+      margin-right: 15px;
+      vertical-align: 30px;
     }
 
     &::after {
