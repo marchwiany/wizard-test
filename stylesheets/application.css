@@ -920,29 +920,46 @@ Primary Nav
   .navigation .callout-block {
     text-align: right; }
     .navigation .callout-block p {
-      display: none; }
-      @media screen and (min-width: 45em) {
-        .navigation .callout-block p {
-          display: block; } }
-    .navigation .callout-block h5 {
+      display: inline-block;
+      vertical-align: 5px;
+      width: inherit;
+      margin-bottom: 0px;
+      font-size: 12px;
+      font-size: 0.85714rem; }
+    .navigation .callout-block h6 {
       margin-top: 12px;
       margin-top: 0.85714rem; }
       @media screen and (min-width: 45em) {
-        .navigation .callout-block h5 {
+        .navigation .callout-block h6 {
           margin-top: 0px; } }
 
 @media screen and (min-width: 45em) {
   .nav-block {
-    border-right: 1px solid #C3C2C2;
     display: inline-block;
     margin-right: 20px;
     margin-right: 1.42857rem;
     padding-right: 20px;
     padding-right: 1.42857rem; } }
 
+.finish-later {
+  display: none; }
+
+.arrow {
+  display: inline-block;
+  width: 29px;
+  margin-right: -31px; }
+
+.sliding-panel-button {
+  vertical-align: super; }
+
 label {
-  font-size: 14px;
-  font-size: 1rem; }
+  font-size: 12px;
+  font-size: 0.85714rem;
+  margin-bottom: 5px;
+  margin-bottom: 0.35714rem;
+  display: block;
+  font-weight: bold;
+  color: #374249; }
 
 input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea,
 select,
@@ -984,14 +1001,27 @@ input[type="submit"] {
 #msform input[type="checkbox"], #msform input[type="radio"] {
   margin: 0px; }
 
-@media screen and (min-width: 45em) {
-  #msform .inputs input {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%; }
-    #msform .inputs input:last-child {
-      margin-right: 0; } }
+#msform .inputs {
+  display: inline-block;
+  width: 100%; }
+  @media screen and (min-width: 45em) {
+    #msform .inputs.half-input input {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      #msform .inputs.half-input input:last-child {
+        margin-right: 0; } }
+  #msform .inputs.full-input input {
+    width: 100%; }
+  @media screen and (min-width: 45em) {
+    #msform .inputs.third-input input {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      #msform .inputs.third-input input:last-child {
+        margin-right: 0; } }
 
 /*-----------------------
 Radio Buttons
@@ -1232,22 +1262,21 @@ Tooltip
     bottom: 3em;
     left: 0;
     background-color: #313839;
-    background: #313839;
     border-radius: 3px;
     box-shadow: 0 2px 2px silver;
+    box-shadow: 0 0 20px 0 rgba(36, 36, 36, 0.25);
     color: #FFF;
     font-size: 10px;
     line-height: 1.5em;
     margin: 0 auto;
-    max-width: 16em;
     opacity: 0;
-    padding: 10px;
+    padding: 15px;
     transition: all 0.2s ease-in-out;
     text-align: left;
-    width: 200px;
+    width: 300px;
     visibility: hidden;
     z-index: 10;
-    margin-left: -64px; }
+    margin-left: -136px; }
     .tooltip-item .tooltip h6 {
       color: #9B9B9B;
       margin-bottom: 5px;
@@ -1256,7 +1285,16 @@ Tooltip
       color: #FFF;
       line-height: 1.5em;
       margin: 0;
-      font-size: 12px; }
+      font-size: 12px;
+      display: inline-block; }
+    .tooltip-item .tooltip.tooltip-image p {
+      width: calc(100% - 99px); }
+    .tooltip-item .tooltip img {
+      width: 76px;
+      box-shadow: 0 0 31px 0 rgba(149, 149, 149, 0.5);
+      display: inline-block;
+      margin-right: 15px;
+      vertical-align: 30px; }
     .tooltip-item .tooltip::after {
       position: absolute;
       right: 0;
@@ -1361,6 +1399,19 @@ em.colored {
 strong {
   font-weight: 600px; }
 
+.sliding-panel-close img {
+  position: absolute;
+  top: 28px;
+  right: 20px;
+  padding: 10px;
+  padding: 0.71429rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 35px; }
+  .sliding-panel-close img:hover {
+    opacity: 0.6; }
+
 [class*=-container] {
   padding: 40px 20px;
   padding: 2.85714rem 1.42857rem;
@@ -1448,7 +1499,9 @@ fieldset:first-of-type {
   outline: none;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
+  transition: all 0.3s ease-in-out;
+  font-size: 14px;
+  font-size: 1rem; }
   #msform .action-button:last-child {
     margin-right: 0; }
   #msform .action-button.grey-button {
@@ -1479,7 +1532,7 @@ Progress Bar
     color: white;
     text-transform: uppercase;
     font-size: 9px;
-    width: calc(100%/18);
+    width: calc(100%/15);
     float: left;
     position: relative; }
 
@@ -1548,7 +1601,7 @@ hr {
     transform: scale(1);
     opacity: 1; }
   .two-column-checkboxes .radio input:focus + .outer .inner {
-    background: url(../../images/checkmark.png) no-repeat;
+    background: url(../images/checkmark.png) no-repeat;
     background-size: 100%;
     height: 12px;
     width: 12px;
@@ -1556,13 +1609,13 @@ hr {
   .two-column-checkboxes .radio .outer {
     border-radius: 0px; }
     .two-column-checkboxes .radio .outer .inner {
-      background: url(../../images/checkmark.png) no-repeat;
+      background: url(../images/checkmark.png) no-repeat;
       background-size: 100%;
       height: 12px;
       width: 12px;
       display: block; }
       .two-column-checkboxes .radio .outer .inner:after {
-        background: url(../../images/checkmark.png) no-repeat;
+        background: url(../images/checkmark.png) no-repeat;
         background-size: 100%;
         height: 12px;
         width: 12px;

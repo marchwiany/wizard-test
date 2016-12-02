@@ -23,8 +23,13 @@
 
   <div class="callout-block">
     <div class="nav-block">
-      <h5>Got 3 minutes?</h5>
-      <p>Account activation is that easy.</p>
+      <h6>Need to change an answer?</h6>
+      <p>Use this </p>
+      <img src="images/arrow.png" class="arrow">
+    </div>
+    <div class="nav-block finish-later">
+      <h6>Want to finish later?</h6>
+      <p><a href="#">Save and Logout</a></p>
     </div>
     <img src="images/menu.png" class="sliding-panel-button">
   </div>
@@ -50,18 +55,15 @@
         <li></li>
         <li></li>
         <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
       </ul>
-      <fieldset>
+      <!--<fieldset>
         <h3>
           Enter the sixteen digit account number on your CopperLine Card:
           <div class="tooltip-item">
             ?
-            <div class="tooltip">
-              <h6>How do we know this?</h6>
-              <p>Lorem ipsum doldae oluptate aperiam unde voluptates quas.</p>
+            <div class="tooltip tooltip-image">
+              <img src="images/cc.png">
+              <p>Your account number is the number on the front of your Copperline Account Card. If you don’t have your card, call 800-260-4897 ext 2 and activate your account through a call center agent.</p>
             </div>
           </div>
         </h3>
@@ -94,6 +96,59 @@
         <input type="button" name="next" class="next action-button" value="Next" />
       </fieldset>
       <fieldset>
+        <h3>
+          Michael, are you the 100% owner of ABC Technology?
+          <div class="tooltip-item">
+            ?
+            <div class="tooltip">
+              <p>We need to verify and understand the ownership structure of your company.</p>
+            </div>
+          </div>
+        </h3>
+        <input type="button" name="next" class="next action-button" value="Yes" />
+        <input type="button" name="next" class="next action-button grey-button" value="No" />
+      </fieldset>
+      <fieldset>
+        <h3>
+          Michael, for your protection, we need to verify your identity through Experian. Is this acceptable?
+          <div class="tooltip-item">
+            ?
+            <div class="tooltip">
+              <p>We use the Experian credit report to verify your identity and to provide you with a pre-qualification for credit for your company. This is a “soft pull” of your report for pre-screening purposes. It will not affect your credit score or put an inquiry on your report. We will reserve the right to pull your credit report if you choose to accept the terms and conditions of our loan offer.</p>
+            </div>
+          </div>
+        </h3>
+        <p>This will not affect your FICO credit score and there will be no inquiry on your credit report.  View <a href="#" target="_blank">terms and conditions</a>.</p>
+        <input type="button" name="next" class="next action-button" value="Yes" />
+        <input type="button" name="next" class="next action-button grey-button" value="No" />
+      </fieldset>-->
+      <fieldset>
+        <h3>
+          Michael, enter your home address and date of birth so we can verify this information with the Experian credit report.
+          <div class="tooltip-item">
+            ?
+            <div class="tooltip">
+              <p>We use the  your home address to match with your Experian credit report. This is a “soft pull” of your report for pre-screening purposes. It will not affect your credit score or put an inquiry on your report. </p>
+            </div>
+          </div>
+        </h3>
+        <label>Home Address</label>
+        <div class="inputs full-input">
+          <input type="text" placeholder="Street" />
+        </div>
+        <div class="inputs third-input">
+          <input type="text" placeholder="City" />
+          <input type="text" placeholder="State" />
+          <input type="number" placeholder="Zip Code" />
+        </div>
+        <label>Date of Birth</label>
+        <div class="inputs half-input">
+          <input type="text" placeholder="MM/DD/YYYY" />
+        </div>
+        <input type="button" name="next" class="next action-button" value="Next" />
+      </fieldset>
+
+      <fieldset>
         <h3>Your company was founded in 2006, is that correct?</h3>
         <input type="button" name="next" class="next action-button" value="Yes" />
         <input type="button" name="next" class="next action-button grey-button" value="No" />
@@ -109,8 +164,16 @@
         <input type="button" name="next" class="next action-button grey-button" value="No" />
       </fieldset>
       <fieldset>
-        <h3>What was your approximate profit last year?</h3>
-        <input class="slider" value="25248" min="-75000" max="75000" name="rangeslider" type="range" />
+        <h3>
+          What was your approximate profit last year?
+          <div class="tooltip-item">
+            ?
+            <div class="tooltip">
+              <p>Loans do not require profitability but it may affect the rates and terms of your loan offer.</p>
+            </div>
+          </div>
+        </h3>
+        <input class="slider" value="0" min="-75000" max="75000" name="rangeslider" type="range" />
         <ul class="three-range">
           <li>- $75,500</li>
           <li>$0</li>
@@ -119,74 +182,15 @@
         <input type="button" name="next" class="next action-button" value="Next" />
       </fieldset>
       <fieldset>
-        <h3>Mike, our records show your home address here, is that correct?</h3>
-        <p>
-          747 Wabash Street<br>
-          Apartment #2203 <br>
-          Chicago, IL 60654
-        </p>
-        <input type="button" name="next" class="next action-button" value="Yes" />
-        <input type="button" name="next" class="next action-button grey-button" value="No" />
-      </fieldset>
-
-      <fieldset>
-        <h3>We need to verify your online identity through Experian Precise ID.</h3>
-        <p>This will not effect your FICO credit score and there will be no inquiry on your credit bureau. View <a href="#" target="_blank">terms and conditions</a>.</p>
-        <input type="button" name="next" class="next action-button" value="Yes, I Accept" />
-        <img src="images/experian-logo.jpg" alt="Experian logo" class="experian-logo">
-      </fieldset>
-      <fieldset>
-        <h3>Which street did you used to live on?</h3>
-        <div class="radio-buttons next" action="">
-          <label class="radio">
-            <input type="radio" name="test" value="test">
-            <span class="outer"><span class="inner"></span></span>
-            <label>Spooner Street</label>
-          </label>
-          <label class="radio">
-            <input type="radio" name="test" value="test">
-            <span class="outer"><span class="inner"></span></span>
-            <label>Maple Ave</label>
-          </label>
-          <label class="radio">
-            <input type="radio" name="test" value="test">
-            <span class="outer"><span class="inner"></span></span>
-            <label>Hawthorne Drive</label>
-          </label>
-          <label class="radio">
-            <input type="radio" name="test" value="test">
-            <span class="outer"><span class="inner"></span></span>
-            <label>None of these</label>
-          </label>
-        </div>
-      </fieldset>
-      <fieldset>
-        <h3>Which company did you work for in the past?</h3>
-        <div class="radio-buttons next" action="">
-          <label class="radio">
-            <input type="radio" name="test" value="test">
-            <span class="outer"><span class="inner"></span></span>
-            <label>Boeing Aircraft Co. </label>
-          </label>
-          <label class="radio">
-            <input type="radio" name="test" value="test">
-            <span class="outer"><span class="inner"></span></span>
-            <label>General Electric</label>
-          </label>
-          <label class="radio">
-            <input type="radio" name="test" value="test">
-            <span class="outer"><span class="inner"></span></span>
-            <label>ABC Printing Company</label>
-          </label>
-          <label class="radio">
-            <input type="radio" name="test" value="test">
-            <span class="outer"><span class="inner"></span></span>
-            <label>None of these</label>
-          </label>
-        </div>
-      </fieldset>
-      <fieldset>
-        <h3>What does your company need the money for? <span>(Check all that apply.)</span></h3>
+        <h3>
+          What does your company need the money for? <span>(Check all that apply.)</span>
+          <div class="tooltip-item">
+            ?
+            <div class="tooltip">
+              <p>Use of funds my affect the rates and terms. For example, we typically extend longer terms and give better rates if you are acquiring equipment because the equipment becomes collateral for the loan. </p>
+            </div>
+          </div>
+        </h3>
         <div class="radio-buttons two-column-checkboxes" action="">
           <label class="radio">
             <input type="checkbox" name="test" value="test">
@@ -233,43 +237,25 @@
         <input type="button" name="next" class="next action-button" value="Yes" />
       </fieldset>
       <fieldset>
-        <h3>You’ve got a $25,248 available. Is this how much you need?</h3>
-        <input class="slider" value="25248" min="0" max="50000" name="rangeslider" type="range" />
-        <ul class="three-range">
-          <li>$0</li>
-          <li>$25,000</li>
-          <li>$50,000</li>
-        </ul>
-        <input type="button" name="next" class="next action-button" value="Next" />
-      </fieldset>
-      <fieldset class="days-slider">
-        <h5>ACTIVATED: Confirmation #2975</h5>
-        <h3>If the rate and terms are right for you, how quickly do you need the money? </h3>
-        <input class="slider" value="60" min="0" max="120" name="rangeslider" type="range" />
-        <ul class="three-range">
-          <li>Right Now</li>
-          <li>60 Days</li>
-          <li>Rainy Day</li>
-        </ul>
-        <input type="button" name="next" class="next action-button" value="Next" />
-      </fieldset>
-      <fieldset>
-        <h3>Choose your term and payments:</h3>
+        <h3>
+          Congratulations Michael, we have successfully verified your identity and are ready to discuss loan options with you. If the terms are right, how quickly do you want the funds?
+          <div class="tooltip-item">
+            ?
+            <div class="tooltip">
+              <p>If you need the funds right away we can connect you with an account manager who can help you through the process, help you to choose the right loan for you and answer any questions. </p>
+            </div>
+          </div>
+        </h3>
         <div class="radio-buttons next" action="">
           <label class="radio">
             <input type="radio" name="test" value="test">
             <span class="outer"><span class="inner"></span></span>
-            <label>12 months at $345/mo</label>
+            <label>Immediately</label>
           </label>
           <label class="radio">
             <input type="radio" name="test" value="test">
             <span class="outer"><span class="inner"></span></span>
-            <label>24 months at $295/mo</label>
-          </label>
-          <label class="radio">
-            <input type="radio" name="test" value="test">
-            <span class="outer"><span class="inner"></span></span>
-            <label>36 months at $150/mo</label>
+            <label>Next Month</label>
           </label>
           <label class="radio">
             <input type="radio" name="test" value="test">
@@ -296,25 +282,21 @@
 
   <nav class="sliding-panel-content">
     <h4>Card Activation</h4>
-    <!--<div class="sliding-panel-close">Close Panel</div>-->
+    <div class="sliding-panel-close"><img src="images/close.svg"></div>
     <ul class="question-list">
       <li><a href="#">Card Number</a></li>
       <li class="active"><a href="#">Company Name</a></li>
-      <li><a href="#">Card Number</a></li>
       <li><a href="#">Company President</a></li>
       <li><a href="#">Is that you?</a></li>
       <li><a href="#">Contact Info</a></li>
+      <li><a href="#">100% Owner</a></li>
+      <li><a href="#">Verify ID</a></li>
+      <li><a href="#">Home Address & DOB</a></li>
       <li><a href="#">Year Founded</a></li>
       <li><a href="#">Number of Employees</a></li>
       <li><a href="#">Annual Revenue</a></li>
       <li><a href="#">Last Year’s Profit</a></li>
-      <li><a href="#">Home Address</a></li>
-      <li><a href="#">Verify ID</a></li>
-      <li><a href="#">Your Street</a></li>
-      <li><a href="#">Past Employer</a></li>
       <li><a href="#">Use Case</a></li>
-      <li><a href="#">Amount Needed</a></li>
-      <li><a href="#">Rate and Terms</a></li>
       <li><a href="#">Select Offer</a></li>
     </ul>
   </nav>

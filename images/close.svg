@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="10px" height="12px" viewBox="0 0 10 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="entypo/cross" transform="translate(-5.000000, -4.000000)" fill="#FFFFFF">
+            <path d="M14.101,13.053 L11.371,9.933 L14.101,6.812 C14.565,6.348 14.565,5.596 14.101,5.132 C13.637,4.668 12.884,4.668 12.42,5.132 L9.795,8.132 L7.17,5.132 C6.706,4.668 5.954,4.668 5.489,5.132 C5.025,5.596 5.025,6.348 5.489,6.812 L8.219,9.933 L5.489,13.053 C5.025,13.517 5.025,14.269 5.489,14.733 C5.953,15.197 6.705,15.197 7.17,14.733 L9.795,11.733 L12.42,14.733 C12.885,15.197 13.637,15.197 14.101,14.733 C14.565,14.269 14.564,13.517 14.101,13.053 L14.101,13.053 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
