@@ -17,7 +17,7 @@
 
     <header class="navigation">
   <div class="logo">
-    <h1>Copperline USA</h1>
+    <h1><a href="/">Copperline USA</a></h1>
   </div>
 
   <div class="callout-block">
@@ -41,42 +41,60 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="javascripts/all.js"></script>
 
+
     <script type="text/javascript">
-      $("document").ready(function() {
-        $(".slider").rangeslider();
-      });
-      $.fn.rangeslider = function(options) {
-        var obj = this;
-        var defautValue = obj.attr("value");
-        obj.wrap("<span class='range-slider'></span>");
-        obj.after("<span class='slider-container'><span class='bar'><span></span></span><span class='bar-btn'><span class='bar-value'>$0</span></span></span>");
-        obj.attr("oninput", "updateSlider(this)");
-        updateSlider(this);
-        return obj;
-      };
+     $(document).ready(function() {
+       var ripple_wrap = $('.ripple-wrap'),
+           rippler = $('.ripple'),
+           finish = false,
+           monitor = function(el) {
+             var computed = window.getComputedStyle(el, null),
+                 borderwidth = parseFloat(computed.getPropertyValue('border-left-width'));
+             if (!finish && borderwidth >= 1500) {
+               el.style.WebkitAnimationPlayState = "paused";
+               el.style.animationPlayState = "paused";
+               swapContent();
+             }
+             if (finish) {
+               el.style.WebkitAnimationPlayState = "running";
+               el.style.animationPlayState = "running";
+               return;
+             } else {
+               window.requestAnimationFrame(function() {monitor(el)});
+             }
+           };
 
-      function updateSlider(passObj) {
-        var obj = $(passObj);
-        var value = obj.val();
-        var min = obj.attr("min");
-        var max = obj.attr("max");
-        var range = Math.round(max - min);
-        var percentage = Math.round((value - min) * 100 / range);
-        var nextObj = obj.next();
-        nextObj.find("span.bar-btn").css("left", percentage + "%");
-        nextObj.find("span.bar > span").css("width", percentage + "%");
-        nextObj.find("span.bar-btn > span").text(value);
-      };
+       storedcontent = $('#content-2').html();
+       $('#content-2').remove();
 
-    </script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $('.sliding-panel-button,.sliding-panel-fade-screen,.sliding-panel-close').on('click touchstart',function (e) {
-          $('.sliding-panel-content,.sliding-panel-fade-screen').toggleClass('is-visible');
-          e.preventDefault();
-        });
-      });
+       rippler.bind("webkitAnimationEnd oAnimationEnd msAnimationEnd mozAnimationEnd animationend", function(e){
+         ripple_wrap.removeClass('goripple');
+       });
 
+       $('body').on('click', 'a', function(e) {
+         rippler.css('left', e.clientX + 'px');
+         rippler.css('top', e.clientY + 'px');
+         e.preventDefault();
+         finish = false;
+         ripple_wrap.addClass('goripple');
+         window.requestAnimationFrame(function() {monitor(rippler[0])});
+
+
+       });
+
+
+
+       function swapContent() {
+           var newcontent = $('#content-area').html();
+           $('#content-area').html(storedcontent);
+           storedcontent = newcontent;
+           // do some Ajax, put it in the DOM and then set this to true
+           setTimeout(function() {
+             finish = true;
+           },10);
+       }
+
+     });
     </script>
   </body>
 </html>

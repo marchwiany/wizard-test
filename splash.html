@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <link href="/images/favicon.png" rel="icon" type="image/png" />
+
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+    <link href="stylesheets/application.css" rel="stylesheet" />
+  </head>
+
+  <body class="splash">
+
+    <div id="content-area">
+  <a href="wizard.html">
+    <img src="images/home-full.png">
+  </a>
+</div>
+
+<div class="wrap" id="content-area">
+  <h1>Material Design Ripple Transition</h1>
+<p>Just playing around to see if I can recreate the Material Design ripple as a page transition in CSS. Click any <a href="#">link</a> in this block of text to load another set of text. The <a href="#">links</a> don't go anywhere yet. They are just <a href="#">hooks</a> to allow you to click somewhere</p>
+
+<p>The style and animation is entirely CSS so it is smooth. JavaScript is used to add classes at the right time. It also pauses to wait for the content to be replaced, and calculates where to centre the hole. There are two stages to the animation. When a <a href="#">link</a> is clicked the border-width grows very large.</p>
+
+  <p>That's enough reading on this slide. Click a <a href="#">link</a> to load the second slide</p>
+
+
+</div>
+<div id="content-2" style="display:none">
+    <h2>Slide Two</h2>
+<p>This is the second slide. If you want you can <a href="#">go back to the first slide</a>. The second part of the animation is increasing the size of the element itself in order to create a hole.</p>
+
+<p>This transition could be used for presentation slides. Using pushState then this could be used as a transition between webpages.</p>
+
+
+  </div>
+
+<div class="ripple-wrap"><div class="ripple"></div></div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="javascripts/all.js"></script>
+
+
+    <script type="text/javascript">
+     $(document).ready(function() {
+       var ripple_wrap = $('.ripple-wrap'),
+           rippler = $('.ripple'),
+           finish = false,
+           monitor = function(el) {
+             var computed = window.getComputedStyle(el, null),
+                 borderwidth = parseFloat(computed.getPropertyValue('border-left-width'));
+             if (!finish && borderwidth >= 1500) {
+               el.style.WebkitAnimationPlayState = "paused";
+               el.style.animationPlayState = "paused";
+               swapContent();
+             }
+             if (finish) {
+               el.style.WebkitAnimationPlayState = "running";
+               el.style.animationPlayState = "running";
+               return;
+             } else {
+               window.requestAnimationFrame(function() {monitor(el)});
+             }
+           };
+
+       storedcontent = $('#content-2').html();
+       $('#content-2').remove();
+
+       rippler.bind("webkitAnimationEnd oAnimationEnd msAnimationEnd mozAnimationEnd animationend", function(e){
+         ripple_wrap.removeClass('goripple');
+       });
+
+       $('body').on('click', 'a', function(e) {
+         rippler.css('left', e.clientX + 'px');
+         rippler.css('top', e.clientY + 'px');
+         e.preventDefault();
+         finish = false;
+         ripple_wrap.addClass('goripple');
+         window.requestAnimationFrame(function() {monitor(rippler[0])});
+
+
+       });
+
+
+
+       function swapContent() {
+           var newcontent = $('#content-area').html();
+           $('#content-area').html(storedcontent);
+           storedcontent = newcontent;
+           // do some Ajax, put it in the DOM and then set this to true
+           setTimeout(function() {
+             finish = true;
+           },10);
+       }
+
+     });
+    </script>
+  </body>
+</html>
