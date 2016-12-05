@@ -53,12 +53,8 @@ Primary Nav
       @include s-small;
     }
 
-    h6{
-      @include rem(margin-top, 12px);
-
-      @include media($tablet){
-        margin-top: 0px;
-      }
+    h5{
+      @include rem(margin-top, 3px);
     }
   }
 }
@@ -78,8 +74,8 @@ Primary Nav
 
 .arrow{
   display: inline-block;
-  width: 29px;
-  margin-right: -31px;
+  width: 24px;
+  margin-right: -27px;
 }
 
 .sliding-panel-button{

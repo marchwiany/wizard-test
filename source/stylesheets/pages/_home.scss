@@ -25,7 +25,7 @@ fieldset:first-of-type{
 /*form styles*/
 #msform {
   //width: 800px;
-  margin: 150px auto 50px;
+  margin: 153px auto 50px;
   position: relative;
 }
 
@@ -124,7 +124,7 @@ Progress Bar
   content: '';
   display: block;
   width: 100%;
-  height: 10px;
+  height: 4px;
   background: $white-med;
   //position: absolute;
   left: -50%;
@@ -251,5 +251,25 @@ fieldset{
     @include rem(margin-top, 20px);
     @include span-columns(7 of 12);
     @include shift(1);
+  }
+}
+
+//Upload
+.upload{
+  .statement-icon{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 10%;
+  }
+
+  h5{
+    color: $orange-base;
+    text-align: center;
+    @include rem(margin, 10px 0px 20px);
+  }
+
+  .next{
+    @include horizontal-center;
   }
 }

@@ -60,6 +60,29 @@
       &:hover{
         text-decoration: underline;
       }
+
+      &:before{
+        background-color: lighten($orange-base, 35%);
+        border-radius: 50%;
+        content: "";
+        display: inline-block;
+        background-size: 100%;
+        height: 15px;
+        width: 15px;
+        vertical-align: -2px;
+        @include rem(margin-right, 10px);
+      }
+
+      &.checked:before{
+        background: url(../images/check.svg) no-repeat;
+        content: "";
+        display: inline-block;
+        background-size: 100%;
+        height: 15px;
+        width: 15px;
+        vertical-align: -2px;
+        @include rem(margin-right, 10px);
+      }
     }
   }
 }

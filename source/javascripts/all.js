@@ -1,3 +1,5 @@
 //= require subtle-slide
-//= require side-slide
-//= require slide-up
+//= require slider
+//= require panel
+//= require animsition
+//= require animation
