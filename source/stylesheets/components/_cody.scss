@@ -19,7 +19,7 @@ Patterns - reusable parts of our design
   text-transform: uppercase;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
-.cd-main-content{
+.cd-main-content, .wizard{
   .navigation{
     @include position(absolute, 0px 0px null 0px);
 
