@@ -36,7 +36,7 @@ Logo
 Primary Nav
 -----------------------*/
 .navigation{
-  @include position(fixed, 0px 0px null 0px);
+  @include position(absolute, -153px 0px null 0px);
   @include transition(all 0.3s ease-in-out);
   width: 100%;
   z-index: 9;

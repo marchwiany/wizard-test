@@ -263,7 +263,7 @@ fieldset{
     width: 10%;
   }
 
-  h5{
+  h5.orange{
     color: $orange-base;
     text-align: center;
     @include rem(margin, 10px 0px 20px);
