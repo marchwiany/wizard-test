@@ -2783,7 +2783,7 @@ Patterns - reusable parts of our design
   text-transform: uppercase;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); }
 
-.cd-main-content .navigation {
+.cd-main-content .navigation, .wizard .navigation {
   position: absolute;
   top: 0px;
   right: 0px;
