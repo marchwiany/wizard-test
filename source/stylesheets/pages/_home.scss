@@ -258,7 +258,7 @@ fieldset{
 .upload{
   .statement-icon{
     display: block;
-    margin: 0 auto;
+    margin: 20px auto 0px;
     text-align: center;
     width: 10%;
   }
@@ -272,4 +272,9 @@ fieldset{
   .next{
     @include horizontal-center;
   }
+}
+
+.skip-link{
+  @include rem(margin-top, 80px);
+  text-align: center;
 }
