@@ -3264,7 +3264,7 @@ fieldset h3 span {
 
 .upload .statement-icon {
   display: block;
-  margin: 0 auto;
+  margin: 20px auto 0px;
   text-align: center;
   width: 10%; }
 .upload h5.orange {
@@ -3280,6 +3280,11 @@ fieldset h3 span {
   transform: translateX(-50%);
   position: absolute;
   left: 50%; }
+
+.skip-link {
+  margin-top: 80px;
+  margin-top: 5.71429rem;
+  text-align: center; }
 
 .container {
   height: calc(100vh);
