@@ -31,6 +31,10 @@ textarea{
   @include s-big;
   //width: 50%;
 
+  @include placeholder {
+     color: $white-med;
+  }
+
   &:focus{
     //@include box-shadow(0 0 0, transparent);
     border-color: $blue-base;
@@ -150,9 +154,6 @@ $secondary-color: rgb(240,139,59);
   }
 }
 
-
-
-
 /*-----------------------
 Radio Buttons
 -----------------------*/
@@ -172,6 +173,9 @@ Radio Buttons
   }
 }
 
+/*-----------------------
+Slider
+-----------------------*/
 #msform input.slider{
   padding: 0px;
 }
@@ -299,17 +303,18 @@ Radio Buttons
   }
 }
 
-.days-slider{
-  .bar-value{
-
-    &:after {
-      content: "Days";
-      float: right;
-    }
-  }
-}
-
 .add-break{
   display: block;
   clear: both;
+}
+
+/*-----------------------
+Two column form
+-----------------------*/
+.half-input{
+  .field{
+    @include media($tablet){
+      @include span-columns(6 of 12);
+    }
+  }
 }

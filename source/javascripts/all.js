@@ -4,3 +4,4 @@
 //= require panel
 //= require animsition
 //= require animation
+//= require uploader

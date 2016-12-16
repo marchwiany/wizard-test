@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>lock</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-287.000000, -488.000000)">
+            <g id="entypo/lock" transform="translate(284.000000, 487.000000)">
+                <rect id="Rectangle-path" x="0" y="0" width="20" height="20"></rect>
+                <path d="M15.914,7.457 L14.132,7.457 L14.132,6.071 C14.132,3.202 12.811,1.517 10.172,1.517 C7.533,1.517 6.212,3.203 6.212,6.071 L6.212,7.457 L4.232,7.457 C3.685,7.457 3.242,8.098 3.242,8.645 L3.242,16.368 C3.242,16.912 3.666,17.495 4.184,17.662 L5.369,18.044 C5.887,18.211 6.757,18.348 7.301,18.348 L13.044,18.348 C13.588,18.348 14.458,18.211 14.977,18.044 L16.162,17.662 C16.68,17.495 17.104,16.912 17.104,16.368 L17.104,8.645 C17.103,8.098 16.461,7.457 15.914,7.457 L15.914,7.457 Z M8.191,5.675 C8.191,4.244 8.981,3.497 10.171,3.497 C11.361,3.497 12.151,4.245 12.151,5.675 L12.151,7.457 L8.191,7.457 L8.191,5.675 L8.191,5.675 Z" id="Shape" fill="#000000" fill-rule="evenodd"></path>
+            </g>
+        </g>
+    </g>
+</svg>

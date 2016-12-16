@@ -2,7 +2,6 @@
 title: Verification Wizard
 ---
 <main>
-  <%= partial 'partials/navigation' %>
   <section>
     <form id="msform">
       <ul id="progressbar">
@@ -148,96 +147,14 @@ title: Verification Wizard
         <input type="button" name="next" class="next action-button" value="Next" />
       </fieldset>
       <fieldset>
-        <h3>
-          What does your company need the money for? <span>(Check all that apply.)</span>
-          <div class="tooltip-item">
-            ?
-            <div class="tooltip">
-              <p>Use of funds my affect the rates and terms. For example, we typically extend longer terms and give better rates if you are acquiring equipment because the equipment becomes collateral for the loan.</p>
-            </div>
-          </div>
-        </h3>
-        <div class="radio-buttons two-column-checkboxes" action="">
-          <label class="radio">
-            <input type="checkbox" name="test" value="test">
-            <span class="outer"><span class="inner"></span></span>
-            <label>Expansion</label>
-          </label>
-          <label class="radio">
-            <input type="checkbox" name="test" value="test">
-            <span class="outer"><span class="inner"></span></span>
-            <label>Equipment</label>
-          </label>
-          <label class="radio">
-            <input type="checkbox" name="test" value="test">
-            <span class="outer"><span class="inner"></span></span>
-            <label>Inventory</label>
-          </label>
-          <label class="radio">
-            <input type="checkbox" name="test" value="test">
-            <span class="outer"><span class="inner"></span></span>
-            <label>Other stuff</label>
-          </label>
-          <label class="radio">
-            <input type="checkbox" name="test" value="test">
-            <span class="outer"><span class="inner"></span></span>
-            <label>Cash Flow</label>
-          </label>
-          <label class="radio">
-            <input type="checkbox" name="test" value="test">
-            <span class="outer"><span class="inner"></span></span>
-            <label>Remodel</label>
-          </label>
-          <label class="radio">
-            <input type="checkbox" name="test" value="test">
-            <span class="outer"><span class="inner"></span></span>
-            <label>Pay Vendors</label>
-          </label>
-          <label class="radio">
-            <input type="checkbox" name="test" value="test">
-            <span class="outer"><span class="inner"></span></span>
-            <label>Vehicles</label>
-          </label>
-        </div>
-        <br><br>
+        <h3>Is any part of this loan for equipment?</h3>
         <input type="button" name="next" class="next action-button" value="Yes" />
+        <input type="button" name="next" class="next action-button grey-button" value="No" />
       </fieldset>
       <fieldset>
-        <h3>
-          Congratulations Michael, we have successfully verified your identity and are ready to discuss loan options with you. If the terms are right, how quickly do you want the funds?
-          <div class="tooltip-item">
-            ?
-            <div class="tooltip">
-              <p>If you need the funds right away we can connect you with an account manager who can help you through the process, help you to choose the right loan for you and answer any questions. </p>
-            </div>
-          </div>
-        </h3>
-        <div class="radio-buttons next" action="">
-          <label class="radio">
-            <input type="radio" name="test" value="test">
-            <span class="outer"><span class="inner"></span></span>
-            <label>Now</label>
-          </label>
-          <label class="radio">
-            <input type="radio" name="test" value="test">
-            <span class="outer"><span class="inner"></span></span>
-            <label>Next Month</label>
-          </label>
-          <label class="radio">
-            <input type="radio" name="test" value="test">
-            <span class="outer"><span class="inner"></span></span>
-            <label>Not sure</label>
-          </label>
-        </div>
-      </fieldset>
-      <fieldset class="upload">
-        <h3>Michael, the final step is to verify your business income through your business checking account statements.</h3>
-        <p>Download them from your business checking account and upload them here.</p>
-        <br>
-        <img src="images/statements.svg" class="statement-icon">
-        <h5 class="orange">Upload last 3 months banks statements</h5>
-        <input type="button" name="next" class="next action-button" value="Upload" />
-        <a class="next skip-link">Skip and come back later</a>
+        <h3>Are you going to use this loan to consolidate other loans?</h3>
+        <input type="button" name="next" class="next action-button" value="Yes" />
+        <input type="button" name="next" class="next action-button grey-button" value="No" />
       </fieldset>
       <fieldset>
         <h5>You're All Set!</h5>
@@ -281,7 +198,7 @@ title: Verification Wizard
 <script>
   window.intercomSettings = {
     app_id: "ft3n9g7e",
-    name: "Jane Doe", // Full name
+    name: "Michael", // Full name
     email: "customer@example.com", // Email address
     created_at: 1312182000 // Signup date as a Unix timestamp
   };
