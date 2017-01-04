@@ -16,9 +16,9 @@
   <body class="login">
 
     <main class="wizard">
-<header class="navigation">
+<header class="navigation login-portal">
   <div class="logo">
-    <h1><a href="/">Copperline USA</a></h1>
+    <h1><a href="/"><img src="images/logo.png"></a></h1>
   </div>
 
   <div class="callout-block">
@@ -35,7 +35,7 @@
 
 <form id="msform">
   <fieldset>
-    <h1>Welcome back, Michael.</h1><br>
+    <h3>Good morning, Michael.</h3><br>
     <div class="inputs half-input-group">
       <div class="half-input">
         <div class="field">
@@ -49,40 +49,42 @@
       </div>
     </div>
       <input type="button" name="next" class="next action-button add-break" value="Login" />
+      <ul class="footer-logos">
+        <li><img src="images/norton-logo.png" alt="Norton Logo"></li>
+        <li><img src="images/safe-secure-logo.png" alt="Safe & Secure Logo"></li>
+      </ul>
   </fieldset>
   <fieldset class="upload">
     <h5>Good Morning, Michael.</h5>
-    <h3>We need to verify your revenues through your company banks statements.</h3>
+    <h3>
+      We need to verify your revenues through your company banks statements.
+      <div class="tooltip-item">
+        ?
+        <div class="tooltip">
+          <p>We verify your revenue through company banks statement. This is the final underwriting step. Download these from your online business checking account or scan them into your computer. We need all pages in PDF or jpeg format. Upload the last 3 months of statements.</p>
+        </div>
+      </div>
+    </h3>
     <img src="images/statements.svg" class="statement-icon">
     <div class="file-uploader">
       <h5 class="file-uploader__message-area orange">
-        Upload last 3 banks statements
+        Upload all pages of your last 3 bank statements
       </h5>
       <label class="fileContainer file-chooser">
         Choose File
         <input class="file-chooser__input" type="file"/>
       </label>
     </div>
-    <input type="button" name="next" class="next action-button add-break" value="Upload" />
+    <input type="button" name="next" class="next action-button add-break" value="Done" />
   </fieldset>
   <fieldset class="success">
     <svg id="checkmark-svg" class="run-animation" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 193.3 193.3"><circle class="animate-svg circle" cx="96.65" cy="96.65" r="94.15"/><polyline class="animate-svg checkmark" points="46.9 101.4 76.9 131.4 146.4 61.9"/></svg>
     <h5>Thanks, you're all set!</h5>
-    <h3>We got the statements. We will be in touch with you shortly with your loan options.</h3>
+    <h3>We got your statements. This was the last step, we will be in touch shortly.</h3>
     <input type="button" name="next" class="next action-button" value="Logout" />
   </fieldset>
 </form>
 </main>
-
-<script>
-  window.intercomSettings = {
-    app_id: "ft3n9g7e",
-    name: "Michael", // Full name
-    email: "customer@example.com", // Email address
-    created_at: 1312182000 // Signup date as a Unix timestamp
-  };
-</script>
-<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ft3n9g7e';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
     <script src="javascripts/modernizr.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

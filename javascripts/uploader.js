@@ -4,7 +4,6 @@
    $.fn.uploader = function( options ) {
      var settings = $.extend({
        MessageAreaText: "No files selected.",
-       MessageAreaTextWithFiles: "2 more bank statements needed",
        DefaultErrorMessage: "Unable to open this file.",
        BadTypeErrorMessage: "We cannot accept this file type at this time.",
        acceptedFileTypes: ['pdf', 'jpg', 'gif', 'jpeg', 'bmp', 'tif', 'tiff', 'png', 'xps', 'doc', 'docx',
